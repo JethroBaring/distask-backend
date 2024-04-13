@@ -1,4 +1,5 @@
 package com.jujutsu.distaskbackend.models;
+
 import lombok.NoArgsConstructor;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,6 +16,8 @@ import lombok.Data;
 public class UserProfile {
     @Id
     @GeneratedValue
-    private int id;   
+    private int id;
+    private String bio;
+    private String avatar;
 
 }
