@@ -29,11 +29,11 @@ public class User {
     private List<GroupChat> groupChats;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private UserProfile userProfile;}
+    private UserProfile userProfile;
 
-//     @OneToMany(mappedBy = "creator", cascade = CascadeType.ALL)
-//     private List<Task> createdTasks;
+    @OneToMany(mappedBy = "creator", cascade = CascadeType.ALL)
+    private List<Task> createdTasks;
 
-//     @OneToMany(mappedBy = "assignee", cascade = CascadeType.ALL)
-//     private List<Task> assignedTasks;
-// }
+    @OneToMany(mappedBy = "assignee", cascade = CascadeType.ALL)
+    private List<Task> assignedTasks;
+}
