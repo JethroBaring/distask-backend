@@ -36,7 +36,7 @@ public class Task {
     @JoinColumn(name = "assignee_id")
     private User assignee;
     
-    private String status;
+    private TaskStatus status;
     private LocalDateTime deadline;
 
     @ManyToOne(cascade = CascadeType.ALL)

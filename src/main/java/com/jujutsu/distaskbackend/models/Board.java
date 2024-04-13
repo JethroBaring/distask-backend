@@ -25,8 +25,8 @@ public class Board {
     @GeneratedValue
     private int id;
 
-    // @OneToMany(mappedBy = "board",cascade = CascadeType.ALL)
-    // private List<Task> tasks;
+    @OneToMany(mappedBy = "board",cascade = CascadeType.ALL)
+    private List<Task> tasks;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "group_chat_id")
